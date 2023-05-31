@@ -1,11 +1,19 @@
-from gpt_index import SimpleDirectoryReader, GPTSimpleVectorIndex, LLMPredictor, PromptHelper
+import re
+
+from llama_index import SimpleDirectoryReader, GPTSimpleVectorIndex, LLMPredictor, PromptHelper
 from langchain.chat_models import ChatOpenAI
 import os
+from firestore_service import *
 
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = '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'
 
 
 class Endpoint:
+    faqs = None
+
+    def __init__(self):
+        self.faqs = FireStore.get_answers()
+
     @staticmethod
     def construct_index(directory_path) -> GPTSimpleVectorIndex:
         max_input_size = 2048
@@ -26,8 +34,13 @@ class Endpoint:
 
         return brain
 
-    @staticmethod
-    def chatbot(input_text) -> str:
+    def chatbot(self, input_text) -> str:
         brain = GPTSimpleVectorIndex.load_from_disk('knowledge.json')
+        response = brain.query(input_text, response_mode="compact").response.strip()
+        number = re.findall(r'\d+', response[:25])
 
-        return brain.query(input_text, response_mode="compact").response.strip()
+        try:
+            return self.faqs.get(number[0])['en']
+        except:
+            print('Cannot get number')
+            return 'Contact Customer Support for more info.'
