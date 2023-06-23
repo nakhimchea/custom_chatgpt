@@ -8,13 +8,6 @@ os.environ["OPENAI_API_KEY"] = ''
 
 
 class Endpoint:
-    faqs = None
-
-    def __init__(self):
-        print("Initialize Firestore...")
-        self.faqs = FireStore.get_answers()
-        print("Done Initializing Firestore.")
-
     @staticmethod
     def construct_index(directory_path) -> GPTSimpleVectorIndex:
         max_input_size = 2048
@@ -51,24 +44,20 @@ class Endpoint:
         answers = []
 
         try:
-            if len(number) == 1:
-                answers.append(self.faqs[int(number[0])-1]['aKm'])
-            elif len(number) >= 2:
-                string = 'យើងរកឃើញ {0} សំណួរដែលអ្នកអាចសួរ។'.format(len(number))
-                for i in range(len(number)):
-                    string += '\n{0}. {1}'.format(i+1, self.faqs[int(number[i]) - 1]['qKm'])
+            string = ''
+            for i in range(len(number)):
+                string += '{0} '.format(int(number[i]))
+            if string != '':
                 answers.append(string)
 
         except:
             print('Cannot extract number from Number')
 
         try:
-            if len(number1) == 1:
-                answers.append(self.faqs[int(number1[0]) - 1]['aKm'])
-            elif len(number1) >= 2:
-                string = 'យើងរកឃើញ {0} សំណួរដែលអ្នកអាចសួរ។'.format(len(number1))
-                for i in range(len(number1)):
-                    string += '\n{0}. {1}'.format(i+1, self.faqs[int(number1[i]) - 1]['qKm'])
+            string = ''
+            for i in range(len(number1)):
+                string += '{0} '.format(int(number1[i]))
+            if string != '':
                 answers.append(string)
         except:
             print('Cannot extract number from Number1')

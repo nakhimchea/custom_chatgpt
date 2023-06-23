@@ -11,17 +11,6 @@ db = firestore.client()
 
 class FireStore:
     @staticmethod
-    def get_answers() -> list:
-        counts = db.collection('cxBots').document('wingGPT').get().to_dict()['counts']
-
-        faqs = []
-        for i in range(counts):
-            doc = db.collection('cxBots').document('wingGPT').collection('faqs').document(str(i)).get()
-            faqs.append(doc.to_dict())
-
-        return faqs
-
-    @staticmethod
     def failed_faq(input_text: str):
         print("Pushing not trained question...")
         db.collection('cxBots').document('wingGPT').collection('new').document(str(time.time_ns()//1000000)).set({'qEn': input_text}, merge=False)
@@ -36,7 +25,7 @@ class FireStore:
         for i in range(len(dataframe)):
             iq_en = dataframe.loc[i, 'Question EN']
             iq_km = dataframe.loc[i, 'Question KM']
-            ir_en = dataframe.loc[i, 'Response EN'] + ' explained in part ' + str(counts+1) + '.'
+            ir_en = dataframe.loc[i, 'Response EN'] + ' explained in part ' + str(counts) + '.'
 
             content.append(ir_en)
 
@@ -49,6 +38,15 @@ class FireStore:
             }
             db.collection('cxBots').document('wingGPT').collection('faqs').document(str(counts)).set(data, merge=True)
             counts += 1
+        data = {
+            'qEn': 'How to contact you?',
+            'qKm': 'តើយើងអាចទាក់ទងអ្នកដោយរបៀបណា?',
+            'rEn': 'the way to contact us explained in part 67.',
+            'aEn': 'You can contact us via care.centre@wingmoney.com or 023999989 or 012999489.',
+            'aKm': 'សូមទាក់ទងមកកាន់យើងតាម care.centre@wingmoney.com រឺតាមរយៈលេខទូរសព្ទ 023999989 ឬ 012999489។',
+        }
+        db.collection('cxBots').document('wingGPT').collection('faqs').document(str(counts)).set(data, merge=True)
+        counts += 1
 
         FileOperator.write_to_text('knowledge/knowledge.txt', content)
         db.collection('cxBots').document('wingGPT').set({'counts': counts}, merge=True)
