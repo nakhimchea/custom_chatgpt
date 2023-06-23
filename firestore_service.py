@@ -41,9 +41,9 @@ class FireStore:
         data = {
             'qEn': 'How to contact you?',
             'qKm': 'តើយើងអាចទាក់ទងអ្នកដោយរបៀបណា?',
-            'rEn': 'the way to contact us explained in part 67.',
-            'aEn': 'You can contact us via care.centre@wingmoney.com or 023999989 or 012999489.',
-            'aKm': 'សូមទាក់ទងមកកាន់យើងតាម care.centre@wingmoney.com រឺតាមរយៈលេខទូរសព្ទ 023999989 ឬ 012999489។',
+            'rEn': 'the way to contact us explained in part {0}.'.format(counts),
+            'aEn': 'Pardon, please contact the Customer Support team via care.centre@wingmoney.com or 023999989 or 012999489.',
+            'aKm': 'សូមអធ្យាស្រ័យ! សូមទាក់ទងមកកាន់ក្រុមបម្រើអតិថិជនតាមអ៉ីម៉ែល care.centre@wingmoney.com រឺតាមរយៈលេខទូរសព្ទ 023999989 ឬ 012999489។',
         }
         db.collection('cxBots').document('wingGPT').collection('faqs').document(str(counts)).set(data, merge=True)
         counts += 1
