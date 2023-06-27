@@ -22,6 +22,7 @@ class FireStore:
         counts = db.collection('cxBots').document('wingGPT').get().to_dict()['counts']
 
         content = []
+        faqs = []
         for i in range(len(dataframe)):
             iq_en = dataframe.loc[i, 'Question EN']
             iq_km = dataframe.loc[i, 'Question KM']
@@ -36,7 +37,7 @@ class FireStore:
                 'aEn': dataframe.loc[i, 'Answer EN'],
                 'aKm': dataframe.loc[i, 'Answer KM']
             }
-            db.collection('cxBots').document('wingGPT').collection('faqs').document(str(counts)).set(data, merge=True)
+            faqs.append(data)
             counts += 1
         data = {
             'qEn': 'How to contact you?',
@@ -45,8 +46,9 @@ class FireStore:
             'aEn': 'Pardon, please contact the Customer Support team via care.centre@wingmoney.com or 023999989 or 012999489.',
             'aKm': 'សូមអធ្យាស្រ័យ! សូមទាក់ទងមកកាន់ក្រុមបម្រើអតិថិជនតាមអ៉ីម៉ែល care.centre@wingmoney.com រឺតាមរយៈលេខទូរសព្ទ 023999989 ឬ 012999489។',
         }
-        db.collection('cxBots').document('wingGPT').collection('faqs').document(str(counts)).set(data, merge=True)
+        faqs.append(data)
         counts += 1
+        db.collection('cxBots').document('wingGPT').set({'faqs': faqs}, merge=True)
 
         FileOperator.write_to_text('knowledge/knowledge.txt', content)
         db.collection('cxBots').document('wingGPT').set({'counts': counts}, merge=True)
