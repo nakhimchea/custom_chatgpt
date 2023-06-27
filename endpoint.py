@@ -65,4 +65,4 @@ class Endpoint:
         if len(answers) == 0:
             FireStore.failed_faq(input_text)
 
-        return answers[-1] if len(answers) != 0 else response
+        return answers[-1] if len(answers) != 0 else '68'
