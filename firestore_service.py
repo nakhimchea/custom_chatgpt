@@ -19,7 +19,7 @@ class FireStore:
     @staticmethod
     def write_faqs(dataframe: DataFrame):
         print("Writing to Firestore")
-        counts = db.collection('cxBots').document('wingGPT').get().to_dict()['counts']
+        counts = 0
 
         content = []
         faqs = []
@@ -47,10 +47,8 @@ class FireStore:
             'aKm': 'សូមអធ្យាស្រ័យ! សូមទាក់ទងមកកាន់ក្រុមបម្រើអតិថិជនតាមអ៉ីម៉ែល care.centre@wingmoney.com រឺតាមរយៈលេខទូរសព្ទ 023999989 ឬ 012999489។',
         }
         faqs.append(data)
-        counts += 1
         db.collection('cxBots').document('wingGPT').set({'faqs': faqs}, merge=True)
 
         FileOperator.write_to_text('knowledge/knowledge.txt', content)
-        db.collection('cxBots').document('wingGPT').set({'counts': counts}, merge=True)
 
         print("Done Writing to Firestore")
