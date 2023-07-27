@@ -1,67 +1,68 @@
-digital loan explained in part 1.
-digital loan eligibility explained in part 2.
-digital loan application explained in part 3.
-Application by Wing agent explained in part 4.
-Extra fee charged from applications by Wing agent explained in part 5.
-Reason to apply digital loan explained in part 6.
-Loan interest rate explained in part 7.
-Loan tenure explained in part 8.
-Maximum loan amount explained in part 9.
-Collateral or guarantor by loan service explained in part 10.
-Wing bank Visa debit card explained in part 11.
-Wing bank Visa debit card eligibility explained in part 12.
-Wing bank Visa debit card usage explained in part 13.
-Card renewal explained in part 14.
-Stolen or lost card or Visa card resolutions explained in part 15.
-Online payment or request OTP explained in part 16.
-Account overcharged explained in part 17.
-Forget pin or reset pin or change pin explained in part 18.
+about digital loan explained in part 0.
+digital loan eligibility explained in part 1.
+digital loan application explained in part 2.
+to apply application by Wing agent explained in part 3.
+extra fee charged from applications by Wing agent explained in part 4.
+reasons to apply digital loan explained in part 5.
+about loan interest rate explained in part 6.
+about loan tenure explained in part 7.
+the maximum loan amount explained in part 8.
+the requirements of collateral or guarantor by loan service explained in part 9.
+about Wing bank Visa debit card explained in part 10.
+Wing bank Visa debit card eligibility explained in part 11.
+Wing bank Visa debit card usage explained in part 12.
+about card renewals explained in part 13.
+The resolutions to stolen or lost card or Visa card explained in part 14.
+about online payments or ways to request OTP explained in part 15.
+about account overcharged explained in part 16.
+to change or reset pin code explained in part 17.
+the resolutions to forgotten pin code explained in part 18.
 Wing Visa debit card validity explained in part 19.
-A joint account for Visa card explained in part 20.
-Visa credit card explained in part 21.
-Types of Visa credit card explained in part 22.
-The benefits of Visa credit Gold and Platinum explained in part 23.
-Offer credit limits to cardholders explained in part 24.
+about a joint account for Visa card explained in part 20.
+about Visa credit card explained in part 21.
+the types of Visa credit card explained in part 22.
+the benefits of Visa credit Gold and Platinum explained in part 23.
+the offer credit limits to cardholders explained in part 24.
 Wing bank Visa credit card eligibility or credit card eligibility explained in part 25.
-The documents to apply for credit card explained in part 26.
-The ways to apply for credit card explained in part 27.
-Visa credit card without a bank account explained in part 28.
+the documents to apply for credit card explained in part 26.
+the ways to apply for credit card explained in part 27.
+the possibility of Visa credit card without a bank account explained in part 28.
 Visa card validity explained in part 29.
-Withdrawal amount from credit card explained in part 30.
-The ways to open a Saving account explained in part 31.
-The benefits of a saving account explained in part 32.
-The maximum transfer limit per day of saving account explained in part 33.
-The maximum transfer limit per transaction of saving account explained in part 34.
-The interest rate of a saving account explained in part 35.
-A fee for a new account explained in part 36.
-Saving account deposit explained in part 37.
-Saving account withdrawal explained in part 38.
-Fee to close an account explained in part 39.
-Interest paid monthly explained in part 40.
-The number of term deposit accounts explained in part 41.
-A certificate of term deposit explained in part 42.
-A current account to open a term deposit account explained in part 43.
-They way to know the interest amount is paid explained in part 44.
-Old deposit account with new interest rate explained in part 45.
-Closing term deposit accounts before the maturity date explained in part 46.
-The maximum transfer limit per day explained in part 47.
-The maximum transfer limit per transaction explained in part 48.
-The interest rate of a current account explained in part 49.
-The way to open an account explained in part 50.
-A fee for a new account explained in part 51.
-Reason to use agency explained in part 52.
-Locations of agencies explained in part 53.
-To cash in or cash out with Bakong explained in part 54.
-The way to cash in or cash out with an agency explained in part 55.
-Number of cash in or cash out per day explained in part 56.
-Receive money from abroad explained in part 57.
-The requirement to receive money from abroad explained in part 58.
-The processing time to receive money from abroad explained in part 59.
-Wing address to receive money from abroad explained in part 60.
-The maximum amount for inbound transfer explained in part 61.
-Countries to be accepted transfer to bank account explained in part 62.
-The way to reject or return money back explained in part 63.
-Zero fee or free transfer from abroad explained in part 64.
-A fee for international transfer explained in part 65.
-Notifications of transactions or transferring explained in part 66.
-The way to do money transfer without app explained in part 67.
+the withdrawal amount from credit card explained in part 30.
+the ways to open a Saving account explained in part 31.
+the benefits of a saving account explained in part 32.
+the maximum transfer limit per day of a saving account explained in part 33.
+the maximum transfer limit per transaction of a saving account explained in part 34.
+the interest rate of a saving account explained in part 35.
+a fee for a new account explained in part 36.
+about saving account deposit explained in part 37.
+about saving account withdrawal explained in part 38.
+the fee to close an account explained in part 39.
+how the interest is paid explained in part 40.
+the number of term deposit accounts to be opened explained in part 41.
+a certificate of term deposit explained in part 42.
+a current account to open a term deposit account explained in part 43.
+the way to know when the interest amount is paid explained in part 44.
+old deposit account with new interest rate explained in part 45.
+about closing term deposit accounts before the maturity date explained in part 46.
+the maximum transfer limit per day explained in part 47.
+the maximum transfer limit per transaction explained in part 48.
+the interest rate of a current account explained in part 49.
+the way to open an account explained in part 50.
+a fee for a new account explained in part 51.
+reason to resolute with agency explained in part 52.
+the locations of agencies explained in part 53.
+to cash in or cash out with Bakong explained in part 54.
+the way to cash in or cash out with an agency explained in part 55.
+the number of transactions per day via Bakong explained in part 56.
+about receiving money from abroad explained in part 57.
+the requirements to receive money from abroad explained in part 58.
+the processing time to receive money from abroad explained in part 59.
+the Wing address to receive money from abroad explained in part 60.
+the maximum amount for inbound transfer explained in part 61.
+the countries to be accepted transfer to bank account explained in part 62.
+the way to reject or return money back explained in part 63.
+the way to get zero fee or free transfer from abroad explained in part 64.
+about the fee for international transfer explained in part 65.
+the notifications of transactions or transferring explained in part 66.
+the way to do money transfer without app explained in part 67.
