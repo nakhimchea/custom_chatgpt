@@ -4,8 +4,6 @@ from llama_index import SimpleDirectoryReader, GPTVectorStoreIndex, LLMPredictor
 from langchain.chat_models import ChatOpenAI
 from firestore_service import *
 
-# os.environ["OPENAI_API_KEY"] = ''
-
 
 class Endpoint:
     @staticmethod
