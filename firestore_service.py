@@ -21,14 +21,14 @@ class FireStore:
         print("Writing to Firestore")
         counts = 0
 
-        # content = []
+        content = []
         faqs = []
         for i in range(len(dataframe)):
             iq_en = dataframe.loc[i, 'Question EN']
             iq_km = dataframe.loc[i, 'Question KM']
             ir_en = dataframe.loc[i, 'Response EN'] + ' explained in part ' + str(counts) + '.'
 
-            # content.append(ir_en)
+            content.append(ir_en)
 
             data = {
                 'qEn': iq_en,
@@ -49,6 +49,6 @@ class FireStore:
         faqs.append(data)
         db.collection('cxBots').document('wingGPT').set({'faqs': faqs}, merge=True)
 
-        # FileOperator.write_to_text('knowledge/knowledge.txt', content)
+        FileOperator.write_to_text('knowledge/knowledge.txt', content)
 
         print("Done Writing to Firestore")
