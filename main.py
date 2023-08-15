@@ -21,7 +21,12 @@ class Request(BaseModel):
     input_text: str
 
 
-@app.post('/response')
+@app.post('/rgx_response')
+def get_response(input_text: Request) -> str:
+    return endpoint.chatbot(input_text.input_text.strip())
+
+
+@app.post('/wingchat')
 def get_response(input_text: Request) -> str:
     return endpoint.chatbot(input_text.input_text.strip())
 
